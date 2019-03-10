@@ -65,3 +65,27 @@ to be configured to use eventlet or gevent just because the main server does.
 But if your external process does use a coroutine framework for whatever reason,
 then monkey patching is likely required, so that the message queue accesses coroutine friendly functions and classes.
 
+
+### API References
+1. SocketIO
+    * logger - True or logger object. default to False.
+    * async_mode - The asynchronous module to use.
+    * ping_timeout
+    * ping_interval
+    * engineio_logger - To enable EngineIO logging.
+
+2. close_room
+    This can be used from outside of SocketIO event context.
+
+3. run
+    * app
+    * host
+    * port
+    * debug
+    * use_reloader
+    * log_output - default False in normal mode and True in debug mode. Unused when threading async mode is used.
+
+4. start_background_task(target, *args, **kwargs)
+    Starts a background
+
+5. Sleep
